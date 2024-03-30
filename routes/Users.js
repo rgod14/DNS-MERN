@@ -6,9 +6,9 @@ const user = require('../controller/Users.js')
 
 const router = express.Router();
 
-router.post('/register', user.Register);
-router.post('/login', user.Login);
-router.get('/logout', user.Logout);
+router.post('/user/register', user.Register);
+router.post('/user/login', user.Login);
+router.get('/user/logout', user.Logout);
 
 // router.route('/register').post(Register);
 // router.route('/login').post(Login);

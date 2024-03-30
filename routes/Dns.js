@@ -6,11 +6,11 @@ const multer = require('multer');
 const upload = multer({ dest: 'uploads/' }); 
 const router = express.Router();
 
-router.post('/save', Dns.postSave);
-router.get('/dns', Dns.getDnsRecords);
-router.put('/dns/:id', Dns.putEditDnsRecord);
-router.delete('/dns/:id', Dns.deleteDnsRecord);
-router.post('/uploadCsv', upload.single('file'), Dns.postUploadCsv);
-router.get('/search', Dns.getSearchDns);
+router.post('/api/save', Dns.postSave);
+router.get('/api/dns', Dns.getDnsRecords);
+router.put('/api/dns/:id', Dns.putEditDnsRecord);
+router.delete('/api/dns/:id', Dns.deleteDnsRecord);
+router.post('/api/uploadCsv', upload.single('file'), Dns.postUploadCsv);
+router.get('/api/search', Dns.getSearchDns);
 
 module.exports = router;

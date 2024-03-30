@@ -19,8 +19,8 @@ app.get('/getData', (req, res) =>{
     res.json([1,2,3,4,5])
 })
 
-app.use('/api', dns);
-app.use('/user', user);
+app.use(dns);
+app.use(user);
 
 const PORT = 4545 || process.env.PORT;
 mongoose.connect(process.env.MONGO_URI)
