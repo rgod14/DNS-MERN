@@ -16,7 +16,11 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
 app.get('/getData', (req, res) =>{
-    res.json([1,2,3,4,5])
+    res.status(200).json([1,2,3,4,5])
+})
+
+app.get('/', (req, res) =>{
+    res.status(200).json([1,2,3,4,5])
 })
 
 app.use(dns);

@@ -18,7 +18,7 @@ const Signup = () => {
       console.log(name, email, Pw)
 
       const response = await axios.post(
-        "http://localhost:4545/user/register",
+        `${process.env.BACKEND}/user/register`,
         {username:name, email:email, password:Pw}
       );
 
