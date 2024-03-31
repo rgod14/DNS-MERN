@@ -16,7 +16,7 @@ const Searching = () => {
 
   const hello = async () => {
     const response = await axios.post(
-      `${process.env.BACKEND}/api/uploadCsv`,
+      `https://dns-mern-1.onrender.com/api/uploadCsv`,
       data,
       {
         headers: {

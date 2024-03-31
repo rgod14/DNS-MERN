@@ -16,9 +16,8 @@ const Signup = () => {
   const handleChange = async () => {
 
       console.log(name, email, Pw)
-
       const response = await axios.post(
-        `${process.env.BACKEND}/user/register`,
+        `https://dns-mern-1.onrender.com/user/register`,
         {username:name, email:email, password:Pw}
       );
 

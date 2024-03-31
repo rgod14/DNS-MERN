@@ -15,7 +15,7 @@ const Login = () => {
   }
   const handleChange = async () => {
       const response = await axios.post(
-        `${process.env.BACKEND}/user/login`,
+        `https://dns-mern-1.onrender.com/user/login`,
         {email:email, password:Pw}
       );
       console.log(response.data);
